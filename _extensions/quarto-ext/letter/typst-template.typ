@@ -21,13 +21,13 @@
 ) = {
   // Configure page and text properties.
   set page(paper: "us-letter", 
-           margin: (top: 2cm),
-           background: place(top, rect(
-      fill: rgb("#E6E6FA"),
-      height: 10%,
-      width: 100%,
+           margin: (top: 3.3cm),
+           background: place(left, rect(
+      fill: rgb("#528067"),
+      height: 100%,
+      width: 10%,
     )))
-  set text(font: "PT Sans")
+  set text(font: "Georgia")
 
   // Display sender at top of page. If there's no sender
   // add some hidden text to keep the same spacing.
@@ -64,4 +64,13 @@
   v(1.25cm)
   name
 }
+
+// add UM letter head
+
+#set page(
+  paper: "us-letter",
+  header: image("um-vertical-rgb.png", width: 25%),
+  number-align: center,
+)
+
 
